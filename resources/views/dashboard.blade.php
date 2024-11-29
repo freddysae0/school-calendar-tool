@@ -29,10 +29,10 @@
                         <p class="d-flex mb-4 text-sm">
                             <span class="me-3">
                                 <a href="
-                                    {{ ($baseUrl = config('app.url')) . $school->link }}
+                                    {{ ($baseUrl = config('app.url')) . '/' . $school->link }}
                                 "
                                     target="_blank">
-                                    {{ ($baseUrl = config('app.url')) . $school->link }}
+                                    {{ ($baseUrl = config('app.url')) . '/' . $school->link }}
                                 </a>
                             </span>
                             <span>
