@@ -29,10 +29,10 @@
                         <p class="d-flex mb-4 text-sm">
                             <span class="me-3">
                                 <a href="
-                                    {{ ($baseUrl = config('app.url')) . ':8000/' . $school->link }}
+                                    {{ ($baseUrl = config('app.url')) . $school->link }}
                                 "
                                     target="_blank">
-                                    {{ ($baseUrl = config('app.url')) . ':8000/' . $school->link }}
+                                    {{ ($baseUrl = config('app.url')) . $school->link }}
                                 </a>
                             </span>
                             <span>
@@ -166,7 +166,7 @@
                                                     </td>
                                                     <td>
                                                         <p class="text-xs font-weight-bold mb-0">
-                                                            {{ config('app.url') . ':8000' . '/' . $school->link . '/' . $group->code }}
+                                                            {{ config('app.url') . '/' . $school->link . '/' . $group->code }}
                                                         </p>
                                                     </td>
                                                     <td class="align-middle text-center text-sm">
