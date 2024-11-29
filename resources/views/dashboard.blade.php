@@ -29,10 +29,10 @@
                         <p class="d-flex mb-4 text-sm">
                             <span class="me-3">
                                 <a href="
-                                    {{ ($baseUrl = config('app.url')) . '/' . $school->link }}
+                                    {{ ($baseUrl = config('app.url')) . ':8000/' . $school->link }}
                                 "
                                     target="_blank">
-                                    {{ ($baseUrl = config('app.url')) . '/' . $school->link }}
+                                    {{ ($baseUrl = config('app.url')) . ':8000/' . $school->link }}
                                 </a>
                             </span>
                             <span>
@@ -81,7 +81,7 @@
                             <div class="card-header p-2 ps-3">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="text-sm mb-0 text-capitalize">Total of subjects</p>
+                                        <p class="text-sm mb-0 text-capitalize">Total of classes</p>
                                         <h4 class="mb-0">
                                             {{ $school->groups->flatMap(function ($group) {
                                                     return $group->subjects;
@@ -166,7 +166,8 @@
                                                     </td>
                                                     <td>
                                                         <p class="text-xs font-weight-bold mb-0">
-                                                            {{ $school->link . '.thissite.com/' . $group->code }}</p>
+                                                            {{ config('app.url') . ':8000' . '/' . $school->link . '/' . $group->code }}
+                                                        </p>
                                                     </td>
                                                     <td class="align-middle text-center text-sm">
                                                         @if ($group->is_active == true)
